@@ -7,13 +7,16 @@ const breakfastBurrito = { name: "Breakfast Burrito", price: 16, category: "Brea
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
 function createMenuItem(name, cost, category) {
-    // const soups = { name: "Tomato Soup", cost: 5, category: "Sides" };
-    // const chicken = { name: "Chicken Fingers", cost: 15, category: "Entree" };
-    // console.log(createMenuItem);
+
+    return { name, cost, category };
 
 }
-//createMenuItem();
+
+
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
+console.log(createMenuItem("Cheesecake", 5, "Dessert"));
+console.log(createMenuItem("French Fries", 3, "Side Items"));
+console.log(createMenuItem("Club Sandwich", 8, "Lunch"));
 
 
 
@@ -27,6 +30,16 @@ and should return a number.
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
+burger.discount = function(string) {
+    if (string === 'teacher' || string === 'student') {
+        return this.price * 0.75;
+    } else {
+        return this.price * 0.9;
+    }
+
+}
+console.log(burger.discount('teacher'));
+
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -38,12 +51,13 @@ const reviews = [{ name: "Daniela", rating: 5, feedback: "Beautiful atmosphere a
     { name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day." },
     { name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." },
     { name: "Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay." },
-    { name: "Reyna", rating: 3.5, feedback: "" },
-]
+    { name: "Reyna", rating: 3.5, feedback: "" }
+];
+
 
 /* Task 3: Console.log just Julius' feedback */
 
-
+console.log();
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
 
